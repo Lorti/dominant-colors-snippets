@@ -34,7 +34,7 @@ const colors = new Promise((resolve, reject) => {
 
 const kmeans = new Promise((resolve, reject) => {
     gm(input)
-        .toBuffer('RGB', function (error, buffer) {
+        .toBuffer('RGB', (error, buffer) => {
             if (error) reject(error);
 
             let pixels = [];
@@ -48,16 +48,15 @@ const kmeans = new Promise((resolve, reject) => {
                 pixel.push(value);
             }
 
-            km.clusterize(pixels, {k: 1}, function (error, result) {
+            km.clusterize(pixels, {k: 1}, (error, result) => {
                 if (error) reject(error);
-                else {
-                    result.forEach(function (cluster) {
-                        resolve({
-                            name: 'k-means',
-                            color: '#' + cluster.centroid.map(value => Math.round(value).toString(16)).join('')
-                        });
+                
+                result.forEach(cluster => {
+                    resolve({
+                        name: 'k-means',
+                        color: '#' + cluster.centroid.map(value => Math.round(value).toString(16)).join('')
                     });
-                }
+                });
             });
         });
 });
