@@ -10,3 +10,5 @@ npm start
 ```
 
 ![](https://raw.githubusercontent.com/Lorti/dominant-colors-snippets/master/strip.png)
+
+Images are taken from <https://www.pexels.com/>.
