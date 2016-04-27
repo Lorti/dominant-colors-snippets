@@ -1,0 +1,9 @@
+{
+  "author": "@manuelwieser",
+  "devDependencies": {
+    "gm": "^1.22.0",
+    "kmeans": "0.0.1",
+    "kmeans-js": "^0.1.2",
+    "node-kmeans": "^1.0.0"
+  }
+}
