@@ -6,7 +6,7 @@ const km = require('node-kmeans');
 
 const args = process.argv.slice(2);
 const input = args[0] || 'cat.jpg';
-const output = args[1] || 'differences.png';
+const output = args[1] || 'strip.png';
 
 const resize = new Promise((resolve, reject) => {
     gm(input)
