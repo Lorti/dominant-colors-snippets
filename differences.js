@@ -50,11 +50,11 @@ const kmeans = new Promise((resolve, reject) => {
 
             km.clusterize(pixels, {k: 1}, (error, result) => {
                 if (error) reject(error);
-                
+
                 result.forEach(cluster => {
                     resolve({
                         name: 'k-means',
-                        color: '#' + cluster.centroid.map(value => Math.round(value).toString(16)).join('')
+                        color: '#' + cluster.centroid.map(value => Math.floor(value).toString(16)).join('')
                     });
                 });
             });
