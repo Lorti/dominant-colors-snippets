@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Thumbnails</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: .5em;
+            padding: 0;
+        }
+        .column {
+            float: left;
+            margin-right: .5em;
+        }
+        img,
+        .wrapper {
+            display: block;
+            width: 320px;
+        }
+        .wrapper {
+            position: relative;
+            margin-top: .5em;
+        }
+        .wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .pixelated {
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+<body>
+    {{#each images}}
+        <div class="column">
+            <img src="{{original}}" width="{{width}}" height="{{height}}">
+            <div class="wrapper" style="padding-top: {{padding}}%">
+                <img src="{{thumbnail}}" width="{{width}}" height="{{height}}">
+            </div>
+            <div class="wrapper" style="padding-top: {{padding}}%">
+                <img class="pixelated" src="{{thumbnail}}" width="{{width}}" height="{{height}}">
+            </div>
+        </div>
+    {{/each}}
+</body>
+</html>

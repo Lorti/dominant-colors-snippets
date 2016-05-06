@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Thumbnails</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: .5em;
+            padding: 0;
+        }
+        .column {
+            float: left;
+            margin-right: .5em;
+        }
+        img,
+        .wrapper {
+            display: block;
+            width: 320px;
+        }
+        .wrapper {
+            position: relative;
+            margin-top: .5em;
+        }
+        .wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .pixelated {
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+<body>
+        <div class="column">
+            <img src="cat.jpg" width="" height="">
+            <div class="wrapper" style="padding-top: 66.62921348314606%">
+                <img src="data:image/gif;base64,R0lGODlhAwADAPMIAHZCRnlIRWtrZ/VIUfNPWP9dZ4aHe6OioNqGjgAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAAIf4dQ29tcHJlc3NlZCBieSBqcGVnLXJlY29tcHJlc3MALAAAAAADAAMAAAQH0IgTACJlRAA7" width="" height="">
+            </div>
+            <div class="wrapper" style="padding-top: 66.62921348314606%">
+                <img class="pixelated" src="data:image/gif;base64,R0lGODlhAwADAPMIAHZCRnlIRWtrZ/VIUfNPWP9dZ4aHe6OioNqGjgAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAAIf4dQ29tcHJlc3NlZCBieSBqcGVnLXJlY29tcHJlc3MALAAAAAADAAMAAAQH0IgTACJlRAA7" width="" height="">
+            </div>
+        </div>
+        <div class="column">
+            <img src="snake.jpg" width="" height="">
+            <div class="wrapper" style="padding-top: 66.25%">
+                <img src="data:image/gif;base64,R0lGODlhAwADAPMIACtjAC9pBEleSkOPJ1iYI2OuJ26nQ36xWJKQnwAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAADAAMAAAQHcBxEihEBRAA7" width="" height="">
+            </div>
+            <div class="wrapper" style="padding-top: 66.25%">
+                <img class="pixelated" src="data:image/gif;base64,R0lGODlhAwADAPMIACtjAC9pBEleSkOPJ1iYI2OuJ26nQ36xWJKQnwAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAADAAMAAAQHcBxEihEBRAA7" width="" height="">
+            </div>
+        </div>
+        <div class="column">
+            <img src="bird.jpg" width="" height="">
+            <div class="wrapper" style="padding-top: 56.14285714285714%">
+                <img src="data:image/gif;base64,R0lGODlhAwADAPMIAFhzlmN6nHKQuXiXw4aTsIKeyJCp0Z+65aK+6AAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAADAAMAAAQHEJkjSAFhRAA7" width="" height="">
+            </div>
+            <div class="wrapper" style="padding-top: 56.14285714285714%">
+                <img class="pixelated" src="data:image/gif;base64,R0lGODlhAwADAPMIAFhzlmN6nHKQuXiXw4aTsIKeyJCp0Z+65aK+6AAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAADAAMAAAQHEJkjSAFhRAA7" width="" height="">
+            </div>
+        </div>
+</body>
+</html>

@@ -4,10 +4,12 @@
     "start": "npm run bird ; npm run cat ; npm run snake",
     "bird": "./differences.js bird.jpg bird.colors.png",
     "cat": "./differences.js cat.jpg cat.colors.png",
-    "snake": "./differences.js snake.jpg snake.colors.png"
+    "snake": "./differences.js snake.jpg snake.colors.png",
+    "thumbnails": "./thumbnails.js && open thumbnails.html"
   },
   "devDependencies": {
     "gm": "^1.22.0",
+    "handlebars": "^4.0.5",
     "node-kmeans": "^1.0.0"
   }
 }
