@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gradients</title>
+    <style>
+        body {
+            width: 100vh;
+            height: 100vh;
+            background-size: 100% 100%;
+            background-color: {{dominant}};
+            background-image:
+                url({{image}}),
+                radial-gradient(ellipse at 16.7% 16.7%, rgba({{colors.[0]}}, 1), rgba({{colors.[0]}}, 0) 50%),
+                radial-gradient(ellipse at 50% 16.7%, rgba({{colors.[1]}}, 1), rgba({{colors.[1]}}, 0) 50%),
+                radial-gradient(ellipse at 83.3% 16.7%, rgba({{colors.[2]}}, 1), rgba({{colors.[2]}}, 0) 50%),
+                radial-gradient(ellipse at 16.7% 50%, rgba({{colors.[3]}}, 1), rgba({{colors.[3]}}, 0) 50%),
+                radial-gradient(ellipse at 50% 50%, rgba({{colors.[4]}}, 1), rgba({{colors.[4]}}, 0) 50%),
+                radial-gradient(ellipse at 83.3% 50%, rgba({{colors.[5]}}, 1), rgba({{colors.[5]}}, 0) 50%),
+                radial-gradient(ellipse at 16.7% 83.3%, rgba({{colors.[6]}}, 1), rgba({{colors.[6]}}, 0) 50%),
+                radial-gradient(ellipse at 50% 83.3%, rgba({{colors.[7]}}, 1), rgba({{colors.[7]}}, 0) 50%),
+                radial-gradient(ellipse at 83.3% 83.3%, rgba({{colors.[8]}}, 1), rgba({{colors.[8]}}, 0) 50%);
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
