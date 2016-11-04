@@ -8,16 +8,11 @@ const handlebars = require('handlebars');
 const args = process.argv.slice(2);
 const input = args[0] || 'cat.jpg';
 
-function hexToRgb(hex) {
-    var parts = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return [
-        parseInt(parts[1], 16),
-        parseInt(parts[2], 16),
-        parseInt(parts[3], 16)
-    ].join(', ');
-}
-
 const source = gm(input);
+
+function luma(r, g, b) {
+    return .299 * r + .587 * g + .114 * b;
+}
 
 const dominant = new Promise((resolve, reject) => {
     source
@@ -37,11 +32,12 @@ const colors = new Promise((resolve, reject) => {
             if (error) {
                 reject(error);
             }
-            const string = buffer.toString('hex');
+            const values = new Uint8Array(buffer);
             const colors = [];
             for (let i = 0; i < 9;) {
-                colors.push(hexToRgb(string.slice(i * 6, ++i * 6)));
+                colors.push(values.slice(i * 3, ++i * 3));
             }
+            // console.log(luma(...colors[3]));
             resolve(colors);
         });
 });
